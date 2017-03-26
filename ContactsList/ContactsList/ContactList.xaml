@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContactsList.ContactList">
+    <StackLayout>
+        <StackLayout BackgroundColor="#2e4">
+            <Button FontSize="60" x:Name="addContactButton" Clicked="addContactButton_Clicked" HorizontalOptions="End" TextColor="#EEE" VerticalOptions="Fill" Text="+"></Button>
+        </StackLayout>
+        <ListView HorizontalOptions="Center" ItemsSource="{Binding Contacts}" ItemTapped="ShowDetail">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Name}"></Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

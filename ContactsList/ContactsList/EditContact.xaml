@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContactsList.EditContact"
+             >
+    <Grid HorizontalOptions="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label>Name:</Label>
+        <Entry Grid.Column="1" Text="{Binding Name, Mode=TwoWay}"></Entry>
+        <Label Grid.Row="1">Number:</Label>
+        <Entry Grid.Row="1" Grid.Column="1" Text="{Binding Number, Mode=TwoWay}"></Entry>
+        <Button Grid.Row="2" x:Name="SaveButton" Clicked="SaveButton_Clicked" Text="Save"></Button>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="CancelButton" Clicked="CancelButton_Clicked" Text="Cancel"></Button>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="30"></Setter>
+                </Style>
+                <Style TargetType="Button">
+                    <Setter Property="FontSize" Value="30"></Setter>
+                </Style>
+            </ResourceDictionary>
+        </Grid.Resources>
+    </Grid>
+</ContentPage>
